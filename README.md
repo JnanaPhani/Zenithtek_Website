@@ -114,7 +114,6 @@ This web application serves as the online presence for Zenith Tek, showcasing ou
 ├── README.md         # Project documentation
 └── .gitignore        # Specifies intentionally untracked files that Git should ignore
 
-
 ## Customization
 
 -   **Tailwind CSS:** Modify the `tailwind.config.js` file to customize the theme, colors, and other styles.
