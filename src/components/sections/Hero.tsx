@@ -151,8 +151,8 @@ const Hero: React.FC = () => {
               <div className="space-y-6 mt-12">
                 <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg transform transition-all duration-300 hover:scale-105 group">
                   <Cpu size={40} className="text-accent mb-4 transform transition-transform duration-300 group-hover:rotate-12" />
-                  <h3 className="font-audiowide text-2xl text-white mb-2">5+</h3>
-                  <p className="text-gray-200">Expert Engineers</p>
+                  <h3 className="font-audiowide text-2xl text-white mb-2">3x</h3>
+                  <p className="text-gray-200">Faster Deployment</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg transform transition-all duration-300 hover:scale-105 group mt-12">
                   <Circuit size={40} className="text-accent mb-4 transform transition-transform duration-300 group-hover:rotate-12" />
