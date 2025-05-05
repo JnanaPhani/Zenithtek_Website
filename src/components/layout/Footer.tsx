@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Facebook, Linkedin, Twitter, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram, MessageCircle} from 'lucide-react';
 import { LogoFooter } from '../ui/Logo';
 
 const Footer: React.FC = () => {
@@ -14,15 +14,44 @@ const Footer: React.FC = () => {
               Technology-driven company specializing in embedded systems, IoT solutions, industrial automation and electronic product development.
             </p>
             <div className="flex space-x-4 mt-6">
-              <a href="https://www.linkedin.com/company/zenith-tek/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="text-white hover:text-accent transition-colors duration-300">
-                <Linkedin size={20} />
+              <a 
+                href="https://www.linkedin.com/company/zenith-tek/?viewAsMember=true" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-white hover:text-white transition-colors duration-300 transform hover:scale-110"
+              >
+                <Linkedin size={28} />
               </a>
-              <a href="https://x.com/zenith_tek" target="_blank" rel="noopener noreferrer" className="text-white hover:text-accent transition-colors duration-300">
+              <a 
+                href="https://www.instagram.com/zenith_tek/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-white hover:text-white transition-colors duration-300 transform hover:scale-110"
+              >
+                <Instagram size={28} />
+              </a>
+              <a 
+                href="https://x.com/zenith_tek" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-white hover:text-white transition-colors duration-300 transform hover:scale-110"
+              >
+                <Twitter size={28} />
+              </a>
+              <a 
+                href="https://wa.me/918500408403" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-white hover:text-white transition-colors duration-300 transform hover:scale-110"
+              >
+                <MessageCircle size={28} />
+              </a>
+              {/* <a href="https://x.com/zenith_tek" target="_blank" rel="noopener noreferrer" className="text-white hover:text-accent transition-colors duration-300">
                 <Twitter size={20} />
               </a>
               <a href="https://www.instagram.com/zenith_tek/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-accent transition-colors duration-300">
                 <Instagram size={20} />
-              </a>
+              </a> */}
             </div>
           </div>
 
