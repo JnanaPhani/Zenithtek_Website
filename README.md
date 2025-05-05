@@ -92,8 +92,7 @@ This web application serves as the online presence for Zenith Tek, showcasing ou
     This will start a local server to preview the production build.
 
 ## Directory Structure
-    ```bash
-    .
+    
     ├── .bolt              # Bolt configuration files
     ├── src               # Source code
     │   ├── components    # React components
