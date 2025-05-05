@@ -92,28 +92,28 @@ This web application serves as the online presence for Zenith Tek, showcasing ou
     This will start a local server to preview the production build.
 
 ## Directory Structure
-
-.
-├── .bolt              # Bolt configuration files
-├── src               # Source code
-│   ├── components    # React components
-│   │   ├── layout    # Layout components (Header, Footer)
-│   │   ├── sections  # Website sections
-│   │   └── ui        # UI components (Logo, Cards)
-│   ├── data          # Data files
-│   ├── App.tsx       # Main application component
-│   ├── main.tsx      # Entry point for React
-│   ├── index.css     # Global styles
-│   └── vite-env.d.ts # TypeScript environment declarations
-├── index.html        # HTML entry point
-├── vite.config.ts    # Vite configuration
-├── tailwind.config.js # Tailwind CSS configuration
-├── postcss.config.js  # PostCSS configuration
-├── tsconfig.json     # TypeScript configuration
-├── package.json      # Project dependencies and scripts
-├── README.md         # Project documentation
-└── .gitignore        # Specifies intentionally untracked files that Git should ignore
-
+    ```bash
+    .
+    ├── .bolt              # Bolt configuration files
+    ├── src               # Source code
+    │   ├── components    # React components
+    │   │   ├── layout    # Layout components (Header, Footer)
+    │   │   ├── sections  # Website sections
+    │   │   └── ui        # UI components (Logo, Cards)
+    │   ├── data          # Data files
+    │   ├── App.tsx       # Main application component
+    │   ├── main.tsx      # Entry point for React
+    │   ├── index.css     # Global styles
+    │   └── vite-env.d.ts # TypeScript environment declarations
+    ├── index.html        # HTML entry point
+    ├── vite.config.ts    # Vite configuration
+    ├── tailwind.config.js # Tailwind CSS configuration
+    ├── postcss.config.js  # PostCSS configuration
+    ├── tsconfig.json     # TypeScript configuration
+    ├── package.json      # Project dependencies and scripts
+    ├── README.md         # Project documentation
+    └── .gitignore        # Specifies intentionally untracked files that Git should ignore
+    
 ## Customization
 
 -   **Tailwind CSS:** Modify the `tailwind.config.js` file to customize the theme, colors, and other styles.
