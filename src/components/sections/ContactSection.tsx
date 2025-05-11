@@ -8,8 +8,47 @@ import {
   Twitter,
   Loader2,
   MessageCircle,
+  CheckCircle,
+  AlertCircle,
 } from "lucide-react";
 import toast, { Toaster } from "react-hot-toast";
+
+// API base URL
+const API_BASE_URL = "http://localhost:5000";
+
+// Custom toast styles
+const toastStyles = {
+  success: {
+    style: {
+      background: "#10B981",
+      color: "#FFFFFF",
+      padding: "16px",
+      borderRadius: "8px",
+      fontWeight: "500",
+      boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
+    },
+    iconTheme: {
+      primary: "#FFFFFF",
+      secondary: "#10B981",
+    },
+    duration: 5000,
+  },
+  error: {
+    style: {
+      background: "#EF4444",
+      color: "#FFFFFF",
+      padding: "16px",
+      borderRadius: "8px",
+      fontWeight: "500",
+      boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
+    },
+    iconTheme: {
+      primary: "#FFFFFF",
+      secondary: "#EF4444",
+    },
+    duration: 5000,
+  },
+};
 
 interface FormData {
   name: string;
@@ -40,23 +79,23 @@ export const Contact: React.FC = () => {
 
   const validateForm = (): boolean => {
     if (!formData.name.trim()) {
-      toast.error("Please enter your name");
+      toast.error("Please enter your name", toastStyles.error);
       return false;
     }
     if (!formData.email.trim()) {
-      toast.error("Please enter your email");
+      toast.error("Please enter your email", toastStyles.error);
       return false;
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      toast.error("Please enter a valid email address");
+      toast.error("Please enter a valid email address", toastStyles.error);
       return false;
     }
     if (!formData.subject) {
-      toast.error("Please select a subject");
+      toast.error("Please select a subject", toastStyles.error);
       return false;
     }
     if (!formData.message.trim()) {
-      toast.error("Please enter your message");
+      toast.error("Please enter your message", toastStyles.error);
       return false;
     }
     return true;
@@ -70,7 +109,8 @@ export const Contact: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://formspree.io/f/xbjvylkd", {
+      // First send to Formspree for email notifications
+      const formspreeResponse = await fetch("https://formspree.io/f/xbjvylkd", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -79,19 +119,43 @@ export const Contact: React.FC = () => {
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
+      // Then save to our backend for Excel export
+      const backendResponse = await fetch(`${API_BASE_URL}/api/submit-form`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-      if (response.ok) {
+      // Check if both submissions were successful
+      if (formspreeResponse.ok && backendResponse.ok) {
         toast.success(
-          "Message sent successfully! We will get back to you soon."
+          "Message sent successfully! We will get back to you soon.",
+          toastStyles.success
         );
         setFormData(initialFormData);
       } else {
-        throw new Error(data.error || "Failed to send message");
+        // Get more detailed error message
+        const formspreeData = await formspreeResponse.json();
+        const backendData = await backendResponse.json();
+
+        if (!formspreeResponse.ok) {
+          throw new Error(
+            formspreeData.error || "Failed to send email notification"
+          );
+        }
+
+        if (!backendResponse.ok) {
+          throw new Error(backendData.message || "Failed to save submission");
+        }
       }
     } catch (error) {
       console.error("Form submission error:", error);
-      toast.error("Failed to send message. Please try again later.");
+      toast.error(
+        "Failed to send message. Please try again later.",
+        toastStyles.error
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -99,7 +163,14 @@ export const Contact: React.FC = () => {
 
   return (
     <section id="contact" className="py-24 bg-gray-50 relative z-10">
-      <Toaster position="top-right" />
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+        gutter={12}
+        containerStyle={{
+          top: 80,
+        }}
+      />
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-4xl font-audiowide text-primary mb-6">
