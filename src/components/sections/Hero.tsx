@@ -128,7 +128,11 @@ const Hero: React.FC = () => {
                 href="#contact" 
                 className="group inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:bg-white/20"
               >
+<<<<<<< HEAD
                 Contact Us
+=======
+                Get in Touch
+>>>>>>> 4f3ff50 (renamed get started with get in touch)
                 <ArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </div>
