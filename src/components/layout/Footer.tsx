@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
                 <FooterLink href="#about">About Us</FooterLink>
               </li>
               <li>
-                <FooterLink href="#capabilities">Core Capabilities</FooterLink>
+                <FooterLink href="#capabilities">Our Capabilities</FooterLink>
               </li>
               <li>
                 <FooterLink href="#expertise">Our Expertise</FooterLink>
