@@ -114,15 +114,19 @@ export const Contact: React.FC = () => {
           </div>
 
           <div className="relative z-20">
-            <div className="bg-white rounded-xl shadow-lg p-10">
-              <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSeVp8Grrk42Qdt0_xHg1YMUkwi6w6A8Jjt1uI2uuhfY32neRw/viewform?embedded=true"
-                className="absolute top-0 left-0 w-full h-full rounded-xl border-none"
-                loading="lazy"
-                title="Zenith Tek Contact Form"
-              >
-                Loading…
-              </iframe>
+            <div className="bg-white rounded-xl shadow-lg p-6 sm:p-10">
+              <div className="aspect-w-1 aspect-h-1">
+                <iframe
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSeVp8Grrk42Qdt0_xHg1YMUkwi6w6A8Jjt1uI2uuhfY32neRw/viewform?embedded=true"
+                  className="w-full h-[1000px] border-0 rounded-lg shadow-md"
+                  frameBorder="0"
+                  marginHeight={0}
+                  marginWidth={0}
+                  title="Zenith Tek Contact Form"
+                >
+                  Loading…
+                </iframe>
+              </div>
             </div>
           </div>
         </div>
