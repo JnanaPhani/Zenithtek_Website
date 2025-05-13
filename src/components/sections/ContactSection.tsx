@@ -117,11 +117,8 @@ export const Contact: React.FC = () => {
             <div className="bg-white rounded-xl shadow-lg p-10">
               <iframe
                 src="https://docs.google.com/forms/d/e/1FAIpQLSeVp8Grrk42Qdt0_xHg1YMUkwi6w6A8Jjt1uI2uuhfY32neRw/viewform?embedded=true"
-                width="100%"
-                height="1000"
-                frameBorder="0"
-                marginHeight={0}
-                marginWidth={0}
+                className="absolute top-0 left-0 w-full h-full rounded-xl border-none"
+                loading="lazy"
                 title="Zenith Tek Contact Form"
               >
                 Loading…
