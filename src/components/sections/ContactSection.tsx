@@ -112,11 +112,11 @@ export const Contact: React.FC = () => {
                   <Phone size={24} className="text-primary mr-6 mt-1 group-hover:scale-110 transition-transform duration-300" />
                   <div>
                     <h4 className="font-audiowide text-lg mb-2">Phone</h4>
-                    <a href="tel:+917702462893" className="text-gray-600 hover:text-primary transition-colors duration-300 block">
-                      +91 7702462893
-                    </a>
                     <a href="tel:+918500408403" className="text-gray-600 hover:text-primary transition-colors duration-300 block">
                       +91 8500408403
+                    </a>
+                    <a href="tel:+917075046045" className="text-gray-600 hover:text-primary transition-colors duration-300 block">
+                      +91 7075046045
                     </a>
                   </div>
                 </div>
