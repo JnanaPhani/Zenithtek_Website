@@ -8,36 +8,36 @@ This web application serves as the online presence for Zenith Tek, showcasing ou
 
 ## Features
 
-- **Modern Design:** A beautiful and fully-featured website design.
-- **Responsive Layout:** Optimized for viewing on various devices, from desktops to mobile phones.
-- **Interactive Elements:** Engaging animations and transitions to enhance user experience.
-- **Informative Sections:**
-  - **Hero:** Introduces Zenith Tek with a dynamic background and key information.
-  - **Company Overview:** Provides an overview of the company's mission and values.
-  - **Core Capabilities:** Highlights the main areas of expertise.
-  - **Expertise Section:** Showcases our expertise in microcontrollers.
-  - **Services Section:** Details the services offered by Zenith Tek.
-  - **Why Choose Us:** Explains the reasons to choose Zenith Tek.
-  - **Contact Section:** Allows visitors to get in touch with us.
-- **Contact Form:** A functional contact form for inquiries.
-- **Social Media Links:** Links to Zenith Tek's social media profiles.
+-   **Modern Design:** A beautiful and fully-featured website design.
+-   **Responsive Layout:** Optimized for viewing on various devices, from desktops to mobile phones.
+-   **Interactive Elements:** Engaging animations and transitions to enhance user experience.
+-   **Informative Sections:**
+    -   **Hero:** Introduces Zenith Tek with a dynamic background and key information.
+    -   **Company Overview:** Provides an overview of the company's mission and values.
+    -   **Core Capabilities:** Highlights the main areas of expertise.
+    -   **Expertise Section:** Showcases our expertise in microcontrollers.
+    -   **Services Section:** Details the services offered by Zenith Tek.
+    -   **Why Choose Us:** Explains the reasons to choose Zenith Tek.
+    -   **Contact Section:** Allows visitors to get in touch with us.
+-   **Contact Form:** A functional contact form for inquiries.
+-   **Social Media Links:** Links to Zenith Tek's social media profiles.
 
 ## Technologies Used
 
-- **React:** A JavaScript library for building user interfaces.
-- **Vite:** A build tool that provides a fast and efficient development experience.
-- **Tailwind CSS:** A utility-first CSS framework for styling the application.
-- **Lucide React:** A library of beautiful icons.
-- **react-tsparticles:** A React component for creating particle effects.
-- **react-hot-toast:** For displaying toast notifications.
-- **Formspree:** For handling form submissions.
+-   **React:** A JavaScript library for building user interfaces.
+-   **Vite:** A build tool that provides a fast and efficient development experience.
+-   **Tailwind CSS:** A utility-first CSS framework for styling the application.
+-   **Lucide React:** A library of beautiful icons.
+-   **react-tsparticles:** A React component for creating particle effects.
+-   **react-hot-toast:** For displaying toast notifications.
+-   **Formspree:** For handling form submissions.
 
 ## Getting Started
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (version 16 or higher)
-- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
+-   [Node.js](https://nodejs.org/) (version 16 or higher)
+-   [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
 
 ### Installation
 
@@ -47,7 +47,6 @@ This web application serves as the online presence for Zenith Tek, showcasing ou
     git clone [repository_url]
     cd [project_directory]
     ```
-
 2.  Install the dependencies:
 
     ```sh
@@ -93,7 +92,7 @@ This web application serves as the online presence for Zenith Tek, showcasing ou
     This will start a local server to preview the production build.
 
 ## Directory Structure
-
+    
     ├── .bolt              # Bolt configuration files
     ├── src               # Source code
     │   ├── components    # React components
@@ -113,80 +112,26 @@ This web application serves as the online presence for Zenith Tek, showcasing ou
     ├── package.json      # Project dependencies and scripts
     ├── README.md         # Project documentation
     └── .gitignore        # Specifies intentionally untracked files that Git should ignore
-
+    
 ## Customization
 
-- **Tailwind CSS:** Modify the `tailwind.config.js` file to customize the theme, colors, and other styles.
-- **Components:** Edit the React components in the `src/components` directory to change the structure and content of the website.
-- **Data:** Update the data files in the `src/data` directory to modify the content of the sections.
+-   **Tailwind CSS:** Modify the `tailwind.config.js` file to customize the theme, colors, and other styles.
+-   **Components:** Edit the React components in the `src/components` directory to change the structure and content of the website.
+-   **Data:** Update the data files in the `src/data` directory to modify the content of the sections.
 
 ## Deployment
 
 This project can be deployed to various platforms, including:
 
-- **Netlify:** Simply connect your GitHub repository to Netlify and it will automatically build and deploy your application.
-- **Vercel:** Similar to Netlify, Vercel provides an easy way to deploy web applications.
-- **GitHub Pages:** You can also deploy the application to GitHub Pages by configuring the build process and setting up a deployment workflow.
+-   **Netlify:** Simply connect your GitHub repository to Netlify and it will automatically build and deploy your application.
+-   **Vercel:** Similar to Netlify, Vercel provides an easy way to deploy web applications.
+-   **GitHub Pages:** You can also deploy the application to GitHub Pages by configuring the build process and setting up a deployment workflow.
 
 ## Troubleshooting
 
 If you encounter any issues while running or building the application, try the following:
 
-- Ensure that you have the correct versions of Node.js and npm/Yarn installed.
-- Check the console for any error messages and try to resolve them.
-- Clear the npm/Yarn cache and try installing the dependencies again.
-- If you're still having trouble, please open an issue on the GitHub repository.
-
-# ZenithTek Website
-
-This repository contains the ZenithTek company website built with React and TypeScript.
-
-## Contact Form Excel Export
-
-The website now includes functionality to export contact form submissions to Excel. Here's how to set it up:
-
-### 1. Start the backend server
-
-```
-cd server
-npm install
-npm run dev
-```
-
-This starts the backend server on port 5000 which will receive form submissions and provide Excel export functionality.
-
-### 2. Start the frontend
-
-```
-npm install
-npm start
-```
-
-This starts the React frontend on port 3000.
-
-### 3. Using the Contact Form
-
-When users fill out and submit the contact form, their submissions are:
-
-- Sent to Formspree for email notifications
-- Stored in the backend server for Excel export
-
-### 4. Accessing the Admin Dashboard
-
-Go to `/admin` to view all form submissions and export them to Excel.
-
-http://localhost:3000/admin
-
-The admin dashboard provides:
-
-- List of all form submissions
-- Search functionality
-- Excel export button
-
-## Important Notes
-
-- In a production environment, you should:
-  - Add authentication to protect the admin dashboard
-  - Use a real database instead of in-memory storage
-  - Configure proper CORS settings
-  - Deploy the backend to a secure server
+-   Ensure that you have the correct versions of Node.js and npm/Yarn installed.
+-   Check the console for any error messages and try to resolve them.
+-   Clear the npm/Yarn cache and try installing the dependencies again.
+-   If you're still having trouble, please open an issue on the GitHub repository.

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import {
   Mail,
   Phone,
@@ -9,6 +9,9 @@ import {
   MessageCircle,
 } from "lucide-react";
 import { LogoFooter } from "../ui/Logo";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+import type { Container, Engine } from "tsparticles-engine";
 
 // Custom Link Component for better click handling
 const FooterLink: React.FC<{ href: string; children: React.ReactNode }> = ({
@@ -25,9 +28,109 @@ const FooterLink: React.FC<{ href: string; children: React.ReactNode }> = ({
 );
 
 const Footer: React.FC = () => {
+  const particlesInit = useCallback(async (engine: Engine) => {
+    await loadFull(engine);
+  }, []);
+
+  const particlesLoaded = useCallback(async (container: Container | undefined) => {
+    // Optional: Add any post-loading logic here
+  }, []);
+
   return (
-    <footer className="bg-primary text-white pt-16 pb-8 relative z-10">
-      <div className="container mx-auto px-4 lg:px-8">
+    <footer className="bg-primary text-white pt-16 pb-8 relative overflow-hidden z-10">
+      {/* <Particles
+        id="tsparticles-footer"
+        init={particlesInit}
+        loaded={particlesLoaded}
+        options={{
+          particles: {
+            number: { value: 80, density: { enable: true, value_area: 800 } },
+            color: { value: "#ffffff" },
+            opacity: { value: 0.1 },
+            size: { value: 3 },
+            line_linked: {
+              enable: true,
+              distance: 150,
+              color: "#ffffff",
+              opacity: 0.05,
+              width: 1,
+            },
+            move: {
+              enable: true,
+              speed: 1,
+              direction: "none",
+              random: true,
+              straight: false,
+              out_mode: "out",
+              bounce: false,
+            },
+          },
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: { enable: true, mode: "repulse" },
+              onclick: { enable: true, mode: "push" },
+              resize: true,
+            },
+            modes: {
+              repulse: { distance: 100, duration: 0.4 },
+              push: { particles_nb: 4 },
+            },
+          },
+          retina_detect: true,
+        }}
+        // className="absolute inset-0 pointer-events-none"
+        className="absolute top-0 left-0 w-full h-full pointer-events-none z-0"
+      /> */}
+
+      <div className="absolute inset-0 h-full w-full z-0 pointer-events-none overflow-hidden">
+  <Particles
+    id="tsparticles-footer"
+    init={particlesInit}
+    loaded={particlesLoaded}
+    options={{
+      fullScreen: { enable: false },
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: "#ffffff" },
+        opacity: { value: 0.1 },
+        size: { value: 3 },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.05,
+          width: 1,
+        },
+        move: {
+          enable: true,
+          speed: 1,
+          direction: "none",
+          random: true,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+        },
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" },
+          resize: true,
+        },
+        modes: {
+          repulse: { distance: 100, duration: 0.4 },
+          push: { particles_nb: 4 },
+        },
+      },
+      retina_detect: true,
+    }}
+    className="h-full w-full"
+  />
+</div>
+
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
@@ -146,13 +249,13 @@ const Footer: React.FC = () => {
                 <Phone size={20} className="mr-2 mt-1 flex-shrink-0" />
                 <div className="flex flex-col">
                   <a
-                    href="tel:+917702462893"
+                    href="tel:+918500408403"
                     className="text-gray-200 hover:text-white transition-colors duration-300"
                   >
                     +91 8500408403
                   </a>
                   <a
-                    href="tel:+918500408403"
+                    href="tel:+917702462893"
                     className="text-gray-200 hover:text-white transition-colors duration-300"
                   >
                     +91 7702462893

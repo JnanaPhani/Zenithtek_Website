@@ -41,15 +41,17 @@ const Hero: React.FC = () => {
     []
   );
 
-  const gradientStyle = {
-    backgroundImage: `linear-gradient(
-      ${135 + mousePosition.x * 10}deg,
-      rgba(8, 95, 99, ${0.9 + mousePosition.y * 0.1}) 0%,
-      rgba(10, 117, 123, ${0.85 + mousePosition.x * 0.15}) 50%,
-      rgba(6, 70, 73, ${0.95 + mousePosition.y * 0.05}) 100%
-    )`,
-  };
-
+  // const gradientStyle = {
+  //   backgroundImage: `linear-gradient(
+  //     ${135 + mousePosition.x * 10}deg,
+  //     rgba(8, 95, 99, ${0.9 + mousePosition.y * 0.1}) 0%,
+  //     rgba(10, 117, 123, ${0.85 + mousePosition.x * 0.15}) 50%,
+  //     rgba(6, 70, 73, ${0.95 + mousePosition.y * 0.05}) 100%
+  //   )`,
+  // };
+const gradientStyle = {
+  backgroundColor: "#085F63",
+};
   const parallaxStyle = {
     transform: `translateY(${scrollY * 0.5}px)`,
   };

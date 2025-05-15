@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/layout/Header";
 import Hero from "./components/sections/Hero";
 import CompanyOverview from "./components/sections/CompanyOverview";
@@ -9,10 +8,9 @@ import ServicesSection from "./components/sections/ServicesSection";
 import WhyChooseUs from "./components/sections/WhyChooseUs";
 import { Contact as ContactSection } from "./components/sections/ContactSection";
 import Footer from "./components/layout/Footer";
-import AdminDashboard from "./components/admin/AdminDashboard";
 import { initSmoothScroll } from "./utils/initSmoothScroll";
 
-function MainLayout() {
+function App() {
   useEffect(() => {
     // Initialize smooth scrolling
     initSmoothScroll();
@@ -32,17 +30,6 @@ function MainLayout() {
       </main>
       <Footer />
     </div>
-  );
-}
-
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<MainLayout />} />
-        <Route path="/admin" element={<AdminDashboard />} />
-      </Routes>
-    </Router>
   );
 }
 
