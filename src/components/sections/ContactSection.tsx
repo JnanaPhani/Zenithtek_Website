@@ -113,7 +113,7 @@ export const Contact: React.FC = () => {
             </div>
           </div>
 
-          <div className="relative z-20">
+{/*           <div className="relative z-20">
             <div className="bg-white rounded-xl shadow-lg p-6 sm:p-10">
               <div className="aspect-w-1 aspect-h-1">
                 <iframe
@@ -128,7 +128,7 @@ export const Contact: React.FC = () => {
                 </iframe>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
