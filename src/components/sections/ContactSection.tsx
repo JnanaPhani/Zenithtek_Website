@@ -40,13 +40,13 @@ export const Contact: React.FC = () => {
                       href="tel:+917702462893" 
                       className="text-gray-600 hover:text-primary transition-colors duration-300 block"
                     >
-                      +91 7702462893
+                      +91 8500408403 
                     </a>
                     <a 
                       href="tel:+918500408403" 
                       className="text-gray-600 hover:text-primary transition-colors duration-300 block"
                     >
-                      +91 8500408403
+                      +91 7702462893
                     </a>
                   </div>
                 </div>
