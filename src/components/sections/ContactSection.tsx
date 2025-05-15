@@ -81,23 +81,23 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gray-50">
+    <section id="contact" className="py-5 bg-gray-50">
       <Toaster position="top-right" />
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-4xl font-audiowide text-primary mb-6">Get In Touch</h2>
-          <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-primary mx-auto mb-4"></div>
           <p className="max-w-3xl mx-auto text-lg text-gray-600">
             Have a project in mind or want to learn more about our services? We'd love to hear from you!
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-1">
           {/* Contact Info Section */}
           <div className="space-y-12">
             <div>
               <h3 className="text-2xl font-audiowide text-primary mb-8">Contact Information</h3>
-              <div className="space-y-8">
+              <div className="space-y-4">
                 <div className="flex items-start group">
                   <Mail size={24} className="text-primary mr-6 mt-1 group-hover:scale-110 transition-transform duration-300" />
                   <div>
