@@ -9,7 +9,7 @@ export const serviceData = [
       },
       {
         title: 'Firmware Development',
-        description: 'Optimized firmware using ESP-IDF, Arduino, and other frameworks'
+        description: 'Optimized firmware using ESP-IDF, Eclipse, and other frameworks'
       },
       {
         title: 'Real-time Applications',
