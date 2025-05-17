@@ -23,9 +23,10 @@ function App() {
         <Hero />
         <CompanyOverview />
         <CoreCapabilities />
+  <WhyChooseUs />
         <ExpertiseSection />
         <ServicesSection />
-        <WhyChooseUs />
+      
         <ContactSection />
       </main>
       <Footer />
